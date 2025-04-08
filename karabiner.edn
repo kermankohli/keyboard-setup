@@ -1,6 +1,6 @@
 {
   :main [
     {:des "Caps Lock Mappings"
-     :rules [[:caps_lock :left_option nil {:alone :escape}]]}
+     :rules [[:caps_lock :left_control nil {:alone :escape}]]}
   ]
 }
