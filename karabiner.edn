@@ -2,6 +2,7 @@
   :templates {
     :open-app "open -a \"%s\""
     :open "open \"%s\"" ; Template for opening URLs
+    :raycast "open \"raycast://%s\"" ; Template for Raycast URLs
   }
   :layers {
     :windows {:key :tab :on_hold :disable}
@@ -26,10 +27,10 @@
              [:m [:open-app "Spark Desktop"]] ; Tab+m -> New Spark Window
             ]}
 
-    ; Actions layer rules
-    {:des "Actions Layer"
-     :rules [:actions
-            
+    ; Raycast Actions (Using Control/CapsLock)
+    {:des "Raycast Actions"
+     :rules [
+             [:!Tn [:raycast "extensions/notion/notion/search-page"]] ; CapsLock+n -> Notion Search
             ]}
   ]
 }
