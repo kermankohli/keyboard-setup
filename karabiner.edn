@@ -15,16 +15,19 @@
     ; Windows layer rules
     {:des "Windows Layer"
      :rules [:windows
-             [:c [:open-app "Google Chrome"]] ; Tab+c -> open Chrome (Moved back here)
+             [:c [:open-app "Google Chrome"]] ; Tab+c -> open Chrome
              [:n [:open-app "Notion"]]          ; CapsLock+n -> Notion
-             [:s [:open-app "Windsurf"]]         ; CapsLock+s -> Windsurf
+             [:f [:open-app "Figma"]]           ; CapsLock+f -> Figma
+             [:p [:open-app "WhatsApp"]]        ; CapsLock+p -> WhatsApp
+             [:s [:open-app "Slack"]]           ; CapsLock+s -> Slack
+             [:q [:open-app "Windsurf"]]        ; CapsLock+q -> Windsurf
              [:i [:open-app "Todoist"]]         ; CapsLock+i -> Todoist
              [:d [:open-app "Drafts"]]          ; CapsLock+d -> Drafts
              [:t [:open-app "Telegram"]]        ; CapsLock+t -> Telegram
              [:b [:open-app "Blender"]]         ; CapsLock+b -> Blender
              [:l [:open-app "Linear"]]          ; CapsLock+l -> Linear
-             [:y [:open-app "YouTube Music"]] ; CapsLock+m -> YouTube Music (URL)
-             [:m [:open-app "Spark Desktop"]] ; Tab+m -> New Spark Window
+             [:y [:open-app "YouTube Music"]]   ; CapsLock+y -> YouTube Music
+             [:m [:open-app "Spark Desktop"]]   ; CapsLock+m -> Spark Desktop
             ]}
 
     ; Raycast Actions (Using Control/CapsLock)
