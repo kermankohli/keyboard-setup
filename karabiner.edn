@@ -4,10 +4,13 @@
     :open "open \"%s\"" ; Template for opening URLs
   }
   :layers {
-    :windows {:key :tab :on_hold :disable} 
-    :actions {:key :caps_lock :alone {:key :escape}} 
+    :windows {:key :tab :on_hold :disable}
   }
   :main [
+    ; Caps Lock behavior
+    {:des "Caps Lock to Ctrl/Escape"
+     :rules [[:caps_lock :left_control nil {:alone :escape}]]}
+
     ; Windows layer rules
     {:des "Windows Layer"
      :rules [:windows
