@@ -1,19 +1,6 @@
 {
-  :simlayers {
-    :caps-mode {:key :caps_lock}
-  }
-
   :main [
-    ;; Caps Lock tap = Escape
-    {:des "Caps Lock to Escape"
-     :rules [[:caps_lock :escape]]}
-
-    ;; Caps Lock hold = Hyper Mode (⌥⌃ combos)
-    {:des "Caps Mode Rules"
-     :rules [:caps-mode
-             [:g :!Tg]   ;; example: ⌃⌥G
-             [:f :!Tf]   ;; example: ⌃⌥F
-             [:d :!Td]   ;; example: ⌃⌥D
-             ]}
+    {:des "Caps Lock Mappings"
+     :rules [[:caps_lock :left_option nil {:alone :escape}]]}
   ]
 }
