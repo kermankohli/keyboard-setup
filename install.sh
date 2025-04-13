@@ -33,6 +33,12 @@ open -a "Karabiner-Elements"
 echo "Waiting for Karabiner to initialize..."
 sleep 5
 
+# Rename the default profile to "Default"
+if [ -f ~/.config/karabiner/karabiner.json ]; then
+    echo "Updating Karabiner profile name..."
+    sed -i '' 's/"Default profile"/"Default"/' ~/.config/karabiner/karabiner.json
+fi
+
 # Symlink configuration
 echo "Creating symlinks..."
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
