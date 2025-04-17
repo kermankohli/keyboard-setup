@@ -4,8 +4,11 @@
     :open "open \"%s\"" ; Template for opening URLs
     :raycast "open \"raycast://%s\"" ; Template for Raycast URLs
   }
+  :applications {
+    :blender ["^org.blender.blender$"]
+  }
   :layers {
-    :windows {:key :tab :on_hold :disable}
+    :windows {:key :tab :on_hold :disable :unless [:blender]}
   }
   :main [
     ; Caps Lock behavior
