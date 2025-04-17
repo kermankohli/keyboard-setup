@@ -20,9 +20,24 @@ if ! command -v goku &> /dev/null; then
     brew install yqrashawn/goku/goku
 fi
 
-# Create config directory if it doesn't exist
+# Create necessary config directories
 echo "Setting up configuration directories..."
+mkdir -p ~/.config/karabiner
 mkdir -p ~/.config
+
+# Ensure Karabiner-Elements is running
+echo "Starting Karabiner-Elements..."
+open -a "Karabiner-Elements"
+
+# Wait for Karabiner to create its initial configuration
+echo "Waiting for Karabiner to initialize..."
+sleep 5
+
+# Rename the default profile to "Default"
+if [ -f ~/.config/karabiner/karabiner.json ]; then
+    echo "Updating Karabiner profile name..."
+    sed -i '' 's/"Default profile"/"Default"/' ~/.config/karabiner/karabiner.json
+fi
 
 # Symlink configuration
 echo "Creating symlinks..."
